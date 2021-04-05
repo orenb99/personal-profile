@@ -1,7 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import LoginButton from "./LoginButton";
 //need to fix the double click delay
+import { ThemeContext } from "../App";
 const Login = () => {
+  const darkTheme = useContext(ThemeContext);
+  const themes = {
+    backgroundColor: darkTheme ? "#333" : "#CCC",
+    color: darkTheme ? "#CCC" : "#333",
+  };
   const passwordElement = useRef("");
   const userElement = useRef("");
   const [errorMessage, setError] = useState("");
@@ -21,7 +27,7 @@ const Login = () => {
       setError("Invalid Password!");
   }
   return (
-    <div className="login-page">
+    <div className="login-page" style={themes}>
       <label htmlFor="username">Enter username</label>
       <input ref={userElement} name="username" type="text" required />
       <br />
