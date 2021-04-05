@@ -1,13 +1,11 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-const LoginButton = ({ validation, error }) => {
-  let bol = validation();
-  return bol ? (
-    <Link to="/profile">
-      <button>login</button>
+const LoginButton = ({ isValid, error }) => {
+  console.log(isValid());
+  return (
+    <Link to={isValid() ? "/profile" : "/login"}>
+      <button onClick={() => error()}>login</button>
     </Link>
-  ) : (
-    <button onClick={() => error()}>login</button>
   );
 };
 
