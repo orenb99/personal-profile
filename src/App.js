@@ -6,8 +6,10 @@ import Home from "./components/Home";
 import "./App.css";
 
 export const ThemeContext = React.createContext();
+export const UserContext = React.createContext();
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
+  const [userName, setUserName] = useState("yes");
   function changeTheme(e) {
     let text = e.target.innerText;
     if (text.includes("light")) text = text.replace("light", "dark");
@@ -22,9 +24,11 @@ function App() {
           dark mode
         </button>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route path="/profile" component={Profile} />
+          <UserContext.Provider value={{ name: userName, set: setUserName }}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route path="/profile" component={Profile} />
+          </UserContext.Provider>
         </Switch>
       </ThemeContext.Provider>
     </Router>

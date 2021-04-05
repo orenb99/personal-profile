@@ -1,0 +1,7 @@
+.transitioned {
+  transition: 0.5s;
+}
+.pic {
+  border-radius: 50%;
+  width: 300px;
+}
