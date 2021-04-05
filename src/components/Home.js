@@ -11,7 +11,7 @@ const Home = () => {
     <div className="home-page main" style={themes}>
       <h1>Welcome to my profile!</h1>
       <Link to="/login" className="link">
-        <h1>login</h1>
+        <span>login</span>
       </Link>
     </div>
   );

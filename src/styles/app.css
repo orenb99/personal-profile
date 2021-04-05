@@ -3,9 +3,8 @@
   font-size: 40px;
 }
 
-.link {
-  color: unset;
-  text-transform: capitalize;
+.home-page > .link {
+  font-size: 80px;
 }
 
 .login-page > .content {
@@ -36,6 +35,14 @@
   text-align: center;
 }
 
+.profile-page > .error {
+  font-size: 60px;
+}
+
+.profile-page > .link {
+  font-size: 50px;
+}
+
 .pic {
   width: 300px;
   border-radius: 50%;
@@ -54,5 +61,11 @@
 
 .dark-mode-button {
   position: fixed;
+}
+
+.link {
+  color: unset;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 /*# sourceMappingURL=app.css.map */

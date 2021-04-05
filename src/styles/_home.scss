@@ -1,9 +1,7 @@
 .home-page {
   text-align: center;
   font-size: 40px;
-}
-.link {
-  color: unset;
-  text-transform: capitalize;
-  
+  & > .link {
+    font-size: 80px;
+  }
 }

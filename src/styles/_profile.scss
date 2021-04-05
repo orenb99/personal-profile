@@ -1,5 +1,11 @@
 .profile-page {
   text-align: center;
+  & > .error {
+    font-size: 60px;
+  }
+  & > .link {
+    font-size: 50px;
+  }
 }
 .pic {
   width: 300px;
