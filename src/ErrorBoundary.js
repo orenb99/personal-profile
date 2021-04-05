@@ -9,9 +9,14 @@ export default class ErrorBoundary extends Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  componentDidCatch(error, errorInfo) {
+    console.log(errorInfo);
+  }
   render() {
     if (this.state.hasError) {
-      <Redirect to="/error" />;
+      <div className="main">
+        <h1>something went wrong</h1>
+      </div>;
     }
     return this.props.children;
   }
