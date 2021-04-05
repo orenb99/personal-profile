@@ -8,8 +8,9 @@ const Home = () => {
     color: darkTheme ? "#CCC" : "#333",
   };
   return (
-    <div className="home-page transitioned" style={themes}>
-      <Link to="/login">
+    <div className="home-page main" style={themes}>
+      <h1>Welcome to my profile!</h1>
+      <Link to="/login" className="link">
         <h1>login</h1>
       </Link>
     </div>

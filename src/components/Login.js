@@ -26,23 +26,25 @@ const Login = () => {
     else setError("User not found!");
   }
   return (
-    <div className="login-page transitioned" style={themes}>
-      <label htmlFor="username">Enter username</label>
-      <input ref={userElement} name="username" type="text" required />
-      <br />
-      <label htmlFor="password">Enter password</label>
-      <input ref={passwordElement} name="password" type="password" required />
-      <button
-        onMouseDown={() => (passwordElement.current.type = "text")}
-        onMouseUp={() => (passwordElement.current.type = "password")}
-        onMouseLeave={() => (passwordElement.current.type = "password")}
-      >
-        show password
-      </button>
-      <br />
-      <LoginButton error={errorHandling} isValid={validate} />
-      <br />
-      <h3 className="errorMessage">{errorMessage}</h3>
+    <div className="login-page main" style={themes}>
+      <div className="content">
+        <label htmlFor="username">Enter username</label>
+        <input ref={userElement} name="username" type="text" required />
+        <br />
+        <label htmlFor="password">Enter password</label>
+        <input ref={passwordElement} name="password" type="password" required />
+        <button
+          onMouseDown={() => (passwordElement.current.type = "text")}
+          onMouseUp={() => (passwordElement.current.type = "password")}
+          onMouseLeave={() => (passwordElement.current.type = "password")}
+        >
+          show password
+        </button>
+        <br />
+        <LoginButton error={errorHandling} isValid={validate} />
+        <br />
+        <h3 className="errorMessage">{errorMessage}</h3>
+      </div>
     </div>
   );
 };

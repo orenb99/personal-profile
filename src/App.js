@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
-import "./App.css";
+import "./styles/app.css";
 
 export const ThemeContext = React.createContext();
 export const UserContext = React.createContext();
@@ -20,9 +20,6 @@ function App() {
   return (
     <Router>
       <ThemeContext.Provider value={darkTheme}>
-        <button class="dark-mode" onClick={(e) => changeTheme(e)}>
-          dark mode
-        </button>
         <Switch>
           <UserContext.Provider value={{ name: userName, set: setUserName }}>
             <Route exact path="/" component={Home} />
@@ -30,6 +27,9 @@ function App() {
             <Route path="/profile" component={Profile} />
           </UserContext.Provider>
         </Switch>
+        <button class="dark-mode-button" onClick={(e) => changeTheme(e)}>
+          dark mode
+        </button>
       </ThemeContext.Provider>
     </Router>
   );

@@ -1,0 +1,58 @@
+.home-page {
+  text-align: center;
+  font-size: 40px;
+}
+
+.link {
+  color: unset;
+  text-transform: capitalize;
+}
+
+.login-page > .content {
+  position: relative;
+  height: 20vh;
+  width: 50vw;
+  left: 30vw;
+  top: 10vh;
+  font-size: 40px;
+}
+
+.login-page > .content > input {
+  width: 250px;
+  height: 20px;
+  margin: 0 20px 0 20px;
+  font-size: 17px;
+}
+
+.login-button {
+  position: relative;
+  left: 40%;
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.profile-page {
+  text-align: center;
+}
+
+.pic {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.main {
+  -webkit-transition: color, background-color 0.5s;
+  transition: color, background-color 0.5s;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.dark-mode-button {
+  position: fixed;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,23 @@
+.login-page {
+  & > .content {
+    position: relative;
+    height: 20vh;
+    width: 50vw;
+    left: 30vw;
+    top: 10vh;
+    font-size: 40px;
+    & > input {
+      width: 250px;
+      height: 20px;
+      margin: 0 20px 0 20px;
+      font-size: 17px;
+    }
+  }
+}
+.login-button {
+  position: relative;
+  left: 40%;
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+}
