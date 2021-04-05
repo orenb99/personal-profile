@@ -26,7 +26,7 @@ function App() {
     else text = text.replace("Dark", "Light");
     e.target.innerText = text;
     setDarkTheme(!darkTheme);
-    throw new Error("yes");
+    //throw new Error("yes");
   }
   return (
     <Router>
