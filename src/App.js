@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
+import ErrorBoundary from "./ErrorBoundary";
 import "./styles/app.css";
+import NotFound from "./components/NotFound";
 
 export const ThemeContext = React.createContext();
 export const UserContext = React.createContext();
@@ -29,15 +31,19 @@ function App() {
   return (
     <Router>
       <ThemeContext.Provider value={darkTheme}>
-        <Switch>
+        <ErrorBoundary>
           <UserContext.Provider value={{ name: userName, set: setUserName }}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route path="/profile" component={Profile} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/profile" component={Profile} />
+              <Route component={NotFound} />
+            </Switch>
           </UserContext.Provider>
-        </Switch>
+        </ErrorBoundary>
+
         <button
-          class="dark-mode-button"
+          className="dark-mode-button"
           onClick={(e) => changeTheme(e)}
           style={theme}
         >
