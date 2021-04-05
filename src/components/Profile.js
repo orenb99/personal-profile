@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import pic from "../imgs/profile-pic.png";
 import { ThemeContext, UserContext } from "../App";
 const Profile = () => {
@@ -20,12 +20,7 @@ const Profile = () => {
           <h3 className="motto">Motto Motto</h3>
         </>
       ) : (
-        <>
-          <h1 className="error">Unauthorized Access</h1>
-          <Link to="/login" className="link">
-            <span>Back to the login page</span>
-          </Link>
-        </>
+        <Redirect to="/error" />
       )}
     </div>
   );

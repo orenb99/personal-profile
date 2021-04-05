@@ -16,6 +16,11 @@
   font-size: 40px;
 }
 
+.login-page > .content > h1 {
+  position: relative;
+  left: 30%;
+}
+
 .login-page > .content > input {
   width: 250px;
   height: 20px;
@@ -46,6 +51,18 @@
 .pic {
   width: 300px;
   border-radius: 50%;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found > .error {
+  font-size: 60px;
+}
+
+.not-found > .link {
+  font-size: 50px;
 }
 
 .main {

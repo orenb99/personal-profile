@@ -6,6 +6,10 @@
     left: 30vw;
     top: 10vh;
     font-size: 40px;
+    & > h1 {
+      position: relative;
+      left: 30%;
+    }
     & > input {
       width: 250px;
       height: 20px;

@@ -28,6 +28,7 @@ const Login = () => {
   return (
     <div className="login-page main" style={themes}>
       <div className="content">
+        <h1>Login</h1>
         <label htmlFor="username">Enter username</label>
         <input ref={userElement} name="username" type="text" required />
         <br />

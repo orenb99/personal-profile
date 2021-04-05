@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 export default class ErrorBoundary extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class ErrorBoundary extends Component {
   }
   render() {
     if (this.state.hasError) {
-      return <h1>something went wrong</h1>;
+      <Redirect to="/error" />;
     }
     return this.props.children;
   }
